@@ -1,34 +1,25 @@
-# Blockchain Ledger Simulation (Using Advanced Data Structures)
-Data Structure Mini project
+# 🔗 Blockchain Ledger Simulation
 
-## 📌 Overview
+A **Blockchain-based Ledger Simulation System** that demonstrates how secure, tamper-proof transactions are recorded using **hashing, proof-of-work mining, and linked data structures**.
 
-This project demonstrates a **Blockchain Ledger Simulation** built using core concepts of **advanced data structures such as hashing, linked structures, and tree-based verification mechanisms**. The goal is to simulate how blockchain systems maintain integrity, immutability, and secure transaction storage in a simplified academic environment.
+This project simulates a **real-world financial transaction system** integrated with:
 
-Instead of relying on a full cryptocurrency framework, this project focuses on the **underlying data structure logic** that powers blockchain systems.
-
----
-
-## 🚀 Features
-
-* 🔗 Blockchain-like linked block structure
-* 🔐 Hash-based data integrity (SHA / custom hashing logic)
-* 🧾 Transaction ledger simulation
-* 🧠 Efficient data handling using arrays / linked lists / hash maps
-* 🔍 Tamper detection through hash validation
-* ⛓️ Chain verification mechanism
-* 📊 Simple visualization of block linkage (optional depending on implementation)
+* 🏦 Bank account validation
+* ⛏ Proof-of-Work mining
+* 🔗 Immutable blockchain structure
+* 🌐 Basic Peer-to-Peer (P2P) communication
 
 ---
 
-## 🏗️ Tech Stack / Concepts Used
+## 🔐 Hashing Concept
 
-* Java / C++ / Python (depending on implementation)
-* Object-Oriented Programming (OOP)
-* Hashing Techniques
-* Linked List (for chain structure)
-* Trees (optional for validation / Merkle-like structure)
-* Arrays & Dynamic Data Structures
+Hashing ensures data integrity:
+
+* Input: Block data
+* Output: Fixed-size hash
+* Any modification → completely different hash
+
+This makes blockchain secure and tamper-resistant.
 
 ---
 
@@ -45,17 +36,47 @@ The **hashing mechanism ensures that even a small change in data will invalidate
 
 ---
 
-## 📦 Project Structure
+## 🚀 Features
+
+* 🔐 **SHA-256 Hashing** for secure block generation
+* ⛏ **Proof-of-Work Mining** (difficulty-based)
+* 🔗 **Linked List Blockchain Structure**
+* 🧾 **Transaction Management System**
+* 🏦 **Bank Database Simulation** (account verification & balance updates)
+* 🌐 **P2P Communication using Sockets**
+* ✅ **Blockchain Integrity Verification**
+* 💻 **Interactive Console-based UI**
+
+---
+
+## 🧠 How It Works
+
+1. User initiates a transaction (sender → receiver, amount)
+2. System verifies:
+
+   * Account existence
+   * Sufficient balance
+3. Transaction is converted into a **block**
+4. Block undergoes **mining (Proof-of-Work)**
+5. Block is added to the **blockchain**
+6. Transaction is optionally broadcasted to other nodes (P2P)
+7. Blockchain integrity can be verified anytime
+
+---
+
+## 📁 Project Structure
 
 ```
 Blockchain-Ledger-Simulation/
 │
 ├── src/
-│   ├── Block.java / block.cpp / block.py
-│   ├── Blockchain.java
-│   ├── HashUtil.java
-│   ├── Transaction.java
-│   └── Main.java
+│   ├── Block.java          # Block structure with hashing & mining
+│   ├── Blockchain.java     # Blockchain logic (add, verify, display)
+│   ├── Transaction.java    # Transaction model
+│   ├── BankDatabase.java   # Account validation & balance handling
+│   ├── NodeClient.java     # P2P sender (optional)
+│   ├── NodeServer.java     # P2P receiver (optional)
+│   └── BlockchainApp.java  # Main driver (user interaction)
 │
 ├── README.md
 └── docs/
@@ -63,57 +84,73 @@ Blockchain-Ledger-Simulation/
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ Technologies Used
 
-1. A transaction is created.
-2. The transaction is added into a block.
-3. Each block stores the hash of the previous block.
-4. A new hash is generated using current block data.
-5. Blocks are linked together forming a chain.
-6. If any block is modified → hash mismatch → chain becomes invalid.
+* **Java**
+* **Data Structures (Linked List)**
+* **Cryptography (SHA-256)**
+* **Socket Programming (P2P Simulation)**
 
 ---
 
-## 🔐 Hashing Concept
+## ▶️ How to Run
 
-Hashing ensures data integrity:
-
-* Input: Block data
-* Output: Fixed-size hash
-* Any modification → completely different hash
-
-This makes blockchain secure and tamper-resistant.
-
----
-
-## 🧪 Example Output
+### 1️⃣ Compile the project
 
 ```
-Block 1 -> Hash: abc123
-Block 2 -> Hash: def456 (prev: abc123)
-Block 3 -> Hash: ghi789 (prev: def456)
+javac *.java
+```
 
-Chain Valid: TRUE
+### 2️⃣ Run the application
+
+```
+java BlockchainApp
+```
+
+### 3️⃣ (Optional) Run P2P Node
+
+In a separate terminal:
+
+```
+java NodeServer
 ```
 
 ---
 
-## 📊 Applications
+## 📸 Sample Output
 
-* Understanding blockchain fundamentals
-* Academic data structure projects
-* Simulation of secure ledger systems
-* Foundation for crypto / Web3 development
+```
+Creating Genesis Block...
+⛏ Block Mined! Hash: 000768720865fc33...
+
+Transaction Added to Blockchain!
+
+--- Blockchain Ledger ---
+Block Index: 1
+Transaction: A101 -> A102 : 1000 coins
+
+Blockchain is VALID
+```
 
 ---
 
-## 🎯 Future Enhancements
+## 🔍 Key Concepts Demonstrated
 
-* Add Merkle Tree implementation
-* GUI visualization of blockchain
-* Proof-of-Work simulation
-* Distributed node simulation
-* Smart contract-like logic
+* Blockchain fundamentals
+* Hash-based immutability
+* Proof-of-Work consensus
+* Transaction validation
+* Distributed communication (basic simulation)
+
+---
+
+## 🚧 Future Enhancements
+
+* 🔐 Digital Signatures for secure authentication
+* 🗄 Integration with MySQL database
+* 🌍 Multi-node blockchain synchronization
+* 🎨 GUI (JavaFX / Web Interface)
+* 🧠 AI-based fraud detection
 
 ---
 
@@ -126,7 +163,7 @@ Computer Science Student | AI/ML Enthusiast | DES PUNE UNIVERSITY
 
 ## 📜 License
 
-This project is for educational purposes. You may modify and use it for learning and academic submissions.
+This project is for educational purposes.
 
 ---
 ⭐ If you like this project, consider starring the repo!
