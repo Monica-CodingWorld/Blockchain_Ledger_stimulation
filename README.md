@@ -156,7 +156,6 @@ Blockchain is VALID
 
 ## 👩‍💻 Author
 
-**Monica**
 - Computer Science Student | AI/ML Enthusiast | DES PUNE UNIVERSITY
 
 ---
